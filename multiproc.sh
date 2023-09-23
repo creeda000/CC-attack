@@ -9,7 +9,7 @@
 
 [ -f proxy.txt ] || python3 cc.py -down -check
 
-atk_cmd="python3 cc.py -url $1"
+atk_cmd="python3 cc.py -url $1 -s 9999999"
 
 #number of process that you want
 process=20
