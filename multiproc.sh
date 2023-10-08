@@ -7,9 +7,9 @@
 #
 #the command you want to exec
 
-[ -f proxy.txt ] || python3 cc.py -down -check
+[ -f proxy.txt ] || python3 cc.py -down -check -v 4
 
-atk_cmd="python3 cc.py -url $1 -s 9999999"
+atk_cmd="python3 cc.py -url $1 -s 9999999 -v 4"
 
 #number of process that you want
 process=20
